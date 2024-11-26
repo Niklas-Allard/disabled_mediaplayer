@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card" id="'. $item . '">
+                
+        <h3>' . htmlspecialchars($item) . '</h3>
+        <img src="folder-icon.png" alt="Ordner">
+        <form action="browse.php" method="get">
+            <input type="hidden" name="folder" value="' . htmlspecialchars($item) . '">
+            <button type="submit">Ordner öffnen</button>
+        </form>
+        <audio id="sound_' . $item .'" controls> 
+            <source src=sound/drachen.mp3 /> 
+        </audio>
+    </div>
+</body>
+</html>
